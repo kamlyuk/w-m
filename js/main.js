@@ -58,7 +58,32 @@ $(document).ready(function () {
         }
     });
 
+    var sliderWrapper = $('.slides-wrapper');
+    var slider = sliderWrapper.find('.slides');
+    var sliderNav = $('.slide-move');
+
+    function moveSlideTo(slideIndex) {
+        slider.css('transform', 'translateX(-' + slideIndex + '00%)');
+        
+        sliderWrapper.height(slider.find('.slide:eq(' + slideIndex + ')').outerHeight());
+        
+        slider.find('.slide.active').removeClass('active');
+        slider.find('.slide:eq(' + slideIndex + ')').addClass('active');
+        
+        sliderNav.filter('.active').removeClass('active');
+        sliderNav.eq(slideIndex).addClass('active');
+    }
+
+    $('.slide-next').click(function () {
+        moveSlideTo(slider.find('.slide.active').index() + 1);
+    });
+    
+    sliderNav.click(function () {
+        moveSlideTo($(this).attr('data-slide'));
+    });
+
     // Инициализация событий после загрузки
+    moveSlideTo(0);
     $('input[type=text],select').trigger('focus');
     $('input[type=text],select').trigger('focusout');
     $('input:eq(0)').focus();

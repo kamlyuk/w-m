@@ -43,6 +43,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     word-wrap: break-word;
+    overflow-y: scroll;
 }
 
 ol, ul {
@@ -829,9 +830,31 @@ h1 {
     text-align: center;
 }
 
+.slides-wrapper {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 15px;
+    margin-left: -15px;
+    transition-duration: 0.3s;
+}
+
+.slides {
+    transition-duration: 0.3s;
+}
+
 .slide {
     position: relative;
     padding-top: 121px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    opacity: 0;
+    transition-duration: 0.3s
+}
+.slide.active {
+    opacity: 1;
 }
 
 .slide::before {
