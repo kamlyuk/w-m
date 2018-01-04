@@ -10,10 +10,10 @@
         <header>
             <div class="container">
                 <nav>
-                    <a>Личная информация</a>
-                    <a>Опыт</a>
-                    <a>JavaScript</a>
-                    <a>О себе</a>
+                    <a class="active">Личная информация</a><!--
+                    --><a>Опыт</a><!--
+                    --><a>JavaScript</a><!--
+                    --><a>О себе</a>
                 </nav>
             </div>
         </header>
@@ -22,17 +22,17 @@
             <div class="container">
                 <h1>Анкета</h1>
                 <form class="slides">
-                    <div class="slide slide-1">
+                    <div class="slide slide-1 active">
                         <h2>Личная информация</h2>
                         <div class="offset-3 col-16">
-                            <label>
-                                <input type="text">
+                            <label class="text">
+                                <input type="text" name="name">
                                 <span class="label">ФИО</span>
                             </label>
                         </div><!--
-                        --><div class="offset-3 col-16">
-                            <label>
-                                <select>
+                        --><div class="offset-6 col-10">
+                            <label class="select">
+                                <select name="birth_year">
                                     <option value="1970">1970</option>
                                     <option value="1971">1971</option>
                                     <option value="1972">1972</option>
@@ -71,104 +71,114 @@
                             </label>
                         </div><!--
                         --><div class="offset-3 col-16">
-                            <label>
-                                <input type="text">
+                            <label class="text">
+                                <input type="text" name="city">
                                 <span class="label">Место проживания</span>
                             </label>
                         </div><!--
                         --><div class="offset-3 col-16">
-                            <label>
-                                <input type="text">
+                            <label class="text">
+                                <input type="text" name="skype">
                                 <span class="label">Skype</span>
                             </label>
                         </div><!--
                         --><div class="offset-3 col-16">
-                            <label>
-                                <input type="text">
+                            <label class="text">
+                                <input type="text" name="email">
                                 <span class="label">E-mail</span>
                             </label>
                         </div>
-                        <a class="button slide-next">Далее</a>
+                        <div class="text-center">
+                            <a class="button slide-next">Далее</a>
+                        </div>
                     </div><!--
                     --><div class="slide slide-2">
                         <h2>Расскажите о своем опыте</h2>
                         <div class="col-6">
-                            <label>
-                                <input type="checkbox" value="БЭМ/OOCSS">
-                                <span class="label">БЭМ/OOCSS</span>
+                            <label class="checkbox">
+                                <input type="checkbox" value="БЭМ/OOCSS" name="experience[]"><!--
+                                --><span class="label">БЭМ/OOCSS</span>
                             </label>
-                            <label>
-                                <input type="checkbox" value="Stylus/LESS/SASS">
-                                <span class="label">Stylus/LESS/SASS</span>
+                            <label class="checkbox">
+                                <input type="checkbox" value="Stylus/LESS/SASS" name="experience[]"><!--
+                                --><span class="label">Stylus/LESS/SASS</span>
                             </label>
-                            <label>
-                                <input type="checkbox" value="Работаю с SVG">
-                                <span class="label">Работаю с SVG</span>
-                            </label>
-                        </div><!--
-                        --><div class="offset-2 col-6">
-                            <label>
-                                <input type="checkbox" value="Верстаю семантично">
-                                <span class="label">Верстаю семантично</span>
-                            </label>
-                            <label>
-                                <input type="checkbox" value="ES2015/ES2016">
-                                <span class="label">ES2015/ES2016</span>
-                            </label>
-                            <label>
-                                <input type="checkbox" value="Gulp/GRUNT">
-                                <span class="label">Gulp/GRUNT</span>
+                            <label class="checkbox">
+                                <input type="checkbox" value="Работаю с SVG" name="experience[]"><!--
+                                --><span class="label">Работаю с SVG</span>
                             </label>
                         </div><!--
                         --><div class="offset-2 col-6">
-                            <label>
-                                <input type="checkbox" value="Webpack">
-                                <span class="label"></span>
+                            <label class="checkbox">
+                                <input type="checkbox" value="Верстаю семантично" name="experience[]"><!--
+                                --><span class="label">Верстаю семантично</span>
                             </label>
-                            <label>
-                                <input type="checkbox" value="jQuery">
-                                <span class="label"></span>
+                            <label class="checkbox">
+                                <input type="checkbox" value="ES2015/ES2016" name="experience[]"><!--
+                                --><span class="label">ES2015/ES2016</span>
                             </label>
-                            <label>
-                                <input type="checkbox" value="Ипользую Git">
-                                <span class="label"></span>
+                            <label class="checkbox">
+                                <input type="checkbox" value="Gulp/GRUNT" name="experience[]"><!--
+                                --><span class="label">Gulp/GRUNT</span>
+                            </label>
+                        </div><!--
+                        --><div class="offset-2 col-6">
+                            <label class="checkbox">
+                                <input type="checkbox" value="Webpack" name="experience[]"><!--
+                                --><span class="label">Webpack</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="jQuery" name="experience[]"><!--
+                                --><span class="label">jQuery</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="Ипользую Git" name="experience[]"><!--
+                                --><span class="label">Ипользую Git</span>
                             </label>
                         </div>
-                        <a class="button slide-next">Далее</a>
+                        <div class="text-center">
+                            <a class="button slide-next">Далее</a>
+                        </div>
                     </div><!--
                     --><div class="slide slide-3">
                         <h2>Уровень владения JavaScript</h2>
+                        <datalist id="levels">
+                            <option>0</option>
+                            <option>25</option>
+                            <option>50</option>
+                            <option>100</option>
+                        </datalist>
                         <div class="bar-text">
-                            <p class="level level-1">Не владею</p>
-                            <p class="level level-2">Использую готовые<br> решения</p>
-                            <p class="level level-3">Использую готовые решения<br> и умею и переделывать</p>
-                            <p class="level level-4">Пишу сложный JS с нуля</p>
+                            <p class="level level-1">Не владею</p><!--
+                            --><p class="level level-2">Использую готовые<br> решения</p><!--
+                            --><p class="level level-3">Использую готовые решения<br> и умею их переделывать</p><!--
+                            --><p class="level level-4">Пишу сложный JS с нуля</p>
                         </div><!--
-                        --><div class="bar">
-                            <div class="bar-positive" style="width: 50%"></div>
-                            <a class="bar-point"></a>
-                            <input type="hidden" value="50">
+                        --><input type="range" value="50" min="0" max="100" step="0.1" list="levels" name="javascript">
+                        <div class="text-center">
+                            <a class="button slide-next">Далее</a>
                         </div>
-                        <a class="button slide-next">Далее</a>
                     </div><!--
                     --><div class="slide slide-4">
                         <h2>Расскажите о себе</h2>
                         <div class="offset-3 col-16">
-                            <p>
+                            <p class="text-center">
                                 Напишите несколько предложений, чем привлекла наша вакансия<br>
                                 и что вы ожидаете от работы у нас.
                             </p>
-                            <label>
-                                <textarea></textarea>
-                                <span class="label">Понравилась тем, что...</span>
+                            <label class="textarea">
+                                <textarea placeholder="Понравилась тем, что..." name="about"></textarea>
                             </label>
                         </div>
-                        <input type="submit" class="button" value="Готово">
+                        <div class="text-center">
+                            <input type="submit" class="button" value="Готово">
+                        </div>
                     </div>
                 </form>
             </div>
         </section>
         <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/jcf.js"></script>
         <script src="js/main.js?v=1"></script>
     </body>
 </html>
