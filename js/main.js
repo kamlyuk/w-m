@@ -32,21 +32,24 @@ $(document).ready(function () {
             var that = $(this);
 
             $('.jcf-select-drop .jcf-option').click(function () {
-                that.focusout();
+                that.blur();
             });
 
             if ($('.jcf-select-drop').length === 0)
             {
-                that.focusout();
+                that.blur();
             }
         }
     });
 
     // Потеря фокуса на текстовых полях и select
-    $('input[type=text], select, textarea').focusout(function () {
+    $('input[type=text], select, textarea').on('change blur',function () {
         var label = $(this).closest('label');
+        console.log($(this).val().length);
         if ($(this).val().length === 0)
             label.removeClass('active');
+        else
+            label.addClass('active');
         label.removeClass('focus');
     });
 
@@ -125,7 +128,7 @@ $(document).ready(function () {
     /* Навигация для мобильной версии START */
 
     var nav = $('header nav');
-    
+
     $('.menu-button').click(function () {
         if (nav.hasClass('active'))
             nav.removeClass('active');
@@ -141,8 +144,8 @@ $(document).ready(function () {
 
     // Инициализация событий после загрузки
     moveSlideTo(0);
-    $('input[type=text],select').trigger('focus');
-    $('input[type=text],select').trigger('focusout');
+    $('input[type=text],select').focus();
+    $('input[type=text],select').blur();
     $('input:eq(0)').focus();
 
     // Отобразить страницу после инициализации всех скриптов
