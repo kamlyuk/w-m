@@ -15,6 +15,7 @@
                     --><a class="slide-move" data-slide="2">JavaScript</a><!--
                     --><a class="slide-move" data-slide="3">О себе</a>
                 </nav>
+                <a class="menu-button"></a>
             </div>
         </header>
         <div class="bg"></div>
@@ -95,67 +96,76 @@
                         </div><!--
                         --><div class="slide slide-2">
                             <h2>Расскажите о своем опыте</h2>
-                            <div class="col-6">
-                                <label class="checkbox">
-                                    <input type="checkbox" value="БЭМ/OOCSS" name="experience[]"><!--
-                                    --><span class="label">БЭМ/OOCSS</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" value="Stylus/LESS/SASS" name="experience[]"><!--
-                                    --><span class="label">Stylus/LESS/SASS</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" value="Работаю с SVG" name="experience[]"><!--
-                                    --><span class="label">Работаю с SVG</span>
-                                </label>
-                            </div><!--
-                            --><div class="offset-2 col-6">
-                                <label class="checkbox">
-                                    <input type="checkbox" value="Верстаю семантично" name="experience[]"><!--
-                                    --><span class="label">Верстаю семантично</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" value="ES2015/ES2016" name="experience[]"><!--
-                                    --><span class="label">ES2015/ES2016</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" value="Gulp/GRUNT" name="experience[]"><!--
-                                    --><span class="label">Gulp/GRUNT</span>
-                                </label>
-                            </div><!--
-                            --><div class="offset-2 col-6">
-                                <label class="checkbox">
-                                    <input type="checkbox" value="Webpack" name="experience[]"><!--
-                                    --><span class="label">Webpack</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" value="jQuery" name="experience[]"><!--
-                                    --><span class="label">jQuery</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" value="Ипользую Git" name="experience[]"><!--
-                                    --><span class="label">Ипользую Git</span>
-                                </label>
-                            </div>
-                            <div class="text-center">
-                                <a class="button slide-next">Далее</a>
+                            <div class="experience-wrapper">
+                                <div class="experience">
+                                    <div class="col-6">
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="БЭМ/OOCSS" name="experience[]"><!--
+                                            --><span class="label">БЭМ/OOCSS</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="Stylus/LESS/SASS" name="experience[]"><!--
+                                            --><span class="label">Stylus/LESS/SASS</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="Работаю с SVG" name="experience[]"><!--
+                                            --><span class="label">Работаю с SVG</span>
+                                        </label>
+                                    </div><!--
+                                    --><div class="offset-2 col-6">
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="Верстаю семантично" name="experience[]"><!--
+                                            --><span class="label">Верстаю семантично</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="ES2015/ES2016" name="experience[]"><!--
+                                            --><span class="label">ES2015/ES2016</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="Gulp/GRUNT" name="experience[]"><!--
+                                            --><span class="label">Gulp/GRUNT</span>
+                                        </label>
+                                    </div><!--
+                                    --><div class="offset-2 col-6">
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="Webpack" name="experience[]"><!--
+                                            --><span class="label">Webpack</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="jQuery" name="experience[]"><!--
+                                            --><span class="label">jQuery</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="Ипользую Git" name="experience[]"><!--
+                                            --><span class="label">Ипользую Git</span>
+                                        </label>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="button slide-next">Далее</a>
+                                    </div>
+                                </div>
                             </div>
                         </div><!--
                         --><div class="slide slide-3">
                             <h2>Уровень владения JavaScript</h2>
-                            <datalist id="levels">
-                                <option>0</option>
-                                <option>25</option>
-                                <option>50</option>
-                                <option>100</option>
-                            </datalist>
-                            <div class="bar-text">
-                                <p class="level level-1">Не владею</p><!--
-                                --><p class="level level-2">Использую готовые<br> решения</p><!--
-                                --><p class="level level-3">Использую готовые решения<br> и умею их переделывать</p><!--
-                                --><p class="level level-4">Пишу сложный JS с нуля</p>
-                            </div><!--
-                            --><input type="range" value="50" min="0" max="100" step="0.1" list="levels" name="javascript">
+                            <div class="bar-wrapper">
+                                <div class="bar">
+                                    <datalist id="levels">
+                                        <option>0</option>
+                                        <option>25</option>
+                                        <option>50</option>
+                                        <option>100</option>
+                                    </datalist>
+                                    <div class="bar-text">
+                                        <p class="level level-1">Не владею</p><!--
+                                        --><p class="level level-2">Использую готовые<br> решения</p><!--
+                                        --><p class="level level-3">Использую готовые решения<br> и умею их переделывать</p><!--
+                                        --><p class="level level-4">Пишу сложный JS с нуля</p>
+                                    </div><!--
+                                    --><input type="range" value="50" min="0" max="100" step="0.1" list="levels" name="javascript">
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
                             <div class="text-center">
                                 <a class="button slide-next">Далее</a>
                             </div>
@@ -164,7 +174,7 @@
                             <h2>Расскажите о себе</h2>
                             <div class="offset-3 col-16">
                                 <p class="text-center">
-                                    Напишите несколько предложений, чем привлекла наша вакансия<br>
+                                    Напишите несколько предложений, чем привлекла наша вакансия
                                     и что вы ожидаете от работы у нас.
                                 </p>
                                 <label class="textarea">
