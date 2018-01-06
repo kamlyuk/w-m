@@ -78,6 +78,8 @@ $(document).ready(function () {
 
         sliderNav.filter('.active').removeClass('active');
         sliderNav.eq(slideIndex).addClass('active');
+
+        $(':focus').blur();
     }
 
     $('.slide-next').click(function () {
