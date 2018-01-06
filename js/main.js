@@ -43,9 +43,8 @@ $(document).ready(function () {
     });
 
     // Потеря фокуса на текстовых полях и select
-    $('input[type=text], select, textarea').on('change blur',function () {
+    $('input[type=text], select, textarea').on('change blur', function () {
         var label = $(this).closest('label');
-        console.log($(this).val().length);
         if ($(this).val().length === 0)
             label.removeClass('active');
         else
@@ -87,6 +86,18 @@ $(document).ready(function () {
 
     sliderNav.click(function () {
         moveSlideTo($(this).attr('data-slide'));
+    });
+
+    slider.swipe({
+        swipe: function (event, direction) {
+            var slideActive = slider.find('.slide.active').index();
+
+            if (direction === 'left' && slideActive + 1 < slider.find('.slide').length)
+                moveSlideTo(slideActive + 1);
+            else if (direction === 'right' && slideActive > 0)
+                moveSlideTo(slideActive - 1);
+        },
+        excludedElements: $.fn.swipe.defaults.excludedElements + ", input, textarea, .jcf-range, label"
     });
     /* Слайдер END */
 
