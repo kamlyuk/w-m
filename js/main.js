@@ -91,6 +91,9 @@ $(document).ready(function () {
     });
 
     slider.swipe({
+        tap: function(event) {
+            $(':focus').blur();
+        },
         swipe: function (event, direction) {
             var slideActive = slider.find('.slide.active').index();
 
