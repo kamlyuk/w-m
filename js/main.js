@@ -99,7 +99,8 @@ $(document).ready(function () {
             else if (direction === 'right' && slideActive > 0)
                 moveSlideTo(slideActive - 1);
         },
-        excludedElements: $.fn.swipe.defaults.excludedElements + ", input, textarea, .jcf-range, label"
+        excludedElements: $.fn.swipe.defaults.excludedElements + ", input, textarea, .jcf-range, label",
+        allowPageScroll: 'vertical'
     });
     /* Слайдер END */
 
