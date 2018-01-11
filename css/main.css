@@ -65,6 +65,10 @@ table {
     border-spacing: 0;
 }
 
+::-ms-clear {
+    display: none;
+}
+
 /* Reset end*/
 
 /* Fonts */
