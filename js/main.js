@@ -80,10 +80,17 @@ $(document).ready(function () {
         sliderNav.eq(slideIndex).addClass('active');
 
         $(':focus').blur();
+        $(slider).one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function (e) {
+            slider.find('.slide:eq(' + slideIndex + ')').find('input[type=text], textarea').eq(0).focus();
+        });
     }
 
     $('.slide-next').click(function () {
         moveSlideTo(slider.find('.slide.active').index() + 1);
+    });
+
+    $('.slide-prev').click(function () {
+        moveSlideTo(slider.find('.slide.active').index() - 1);
     });
 
     sliderNav.click(function () {
@@ -91,7 +98,7 @@ $(document).ready(function () {
     });
 
     slider.swipe({
-        tap: function(event) {
+        tap: function (event) {
             $(':focus').blur();
         },
         swipe: function (event, direction) {

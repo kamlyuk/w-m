@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="ru">
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <title>Анкета Романа Камлюка</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main.css?v=1">
+        <link rel="stylesheet" href="css/main.css?v=3">
     </head>
     <body>
         <header>
@@ -36,7 +35,7 @@
                             --><div class="offset-6 col-10">
                                 <label class="select">
                                     <select name="birth_year">
-                                        <option></option>
+                                        <option value="">&nbsp;</option>
                                         <option value="1970">1970</option>
                                         <option value="1971">1971</option>
                                         <option value="1972">1972</option>
@@ -139,11 +138,12 @@
                                         </label>
                                         <label class="checkbox">
                                             <input type="checkbox" value="Ипользую Git" name="experience[]" checked><!--
-                                            --><span class="label">Ипользую Git</span>
+                                            --><span class="label">Использую Git</span>
                                         </label>
                                     </div>
                                     <div class="text-center">
-                                        <a class="button slide-next">Далее</a>
+                                        <a class="button button-secondary slide-prev">Назад</a><!--
+                                        --><a class="button slide-next">Далее</a>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +168,8 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <a class="button slide-next">Далее</a>
+                                <a class="button button-secondary slide-prev">Назад</a><!--
+                                --><a class="button slide-next">Далее</a>
                             </div>
                         </div><!--
                         --><div class="slide slide-4">
@@ -183,7 +184,8 @@
                                 </label>
                             </div>
                             <div class="text-center">
-                                <input type="submit" class="button" value="Готово">
+                                <a class="button button-secondary slide-prev ">Назад</a><!--
+                                --><input type="submit" class="button " value="Готово">
                             </div>
                         </div>
                     </form>
@@ -193,6 +195,6 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/jcf.js"></script>
         <script src="js/touch-swipe-1.6.18.js"></script>
-        <script src="js/main.js?v=2"></script>
+        <script src="js/main.js?v=3"></script>
     </body>
 </html>

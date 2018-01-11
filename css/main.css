@@ -70,25 +70,25 @@ table {
 /* Fonts */
 
 @font-face {
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 100;
-	src: url('../fonts/roboto-thin.eot');
-	src: local('Roboto Thin'), local('Roboto-Thin'), url('../fonts/roboto-thin.ttf') format('truetype'), url('../fonts/roboto-thin.otf') format('opentype'), url('../fonts/roboto-thin.woff') format('woff'), url('../fonts/roboto-thin.svg') format('svg');
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: url('../fonts/roboto-thin.eot');
+    src: local('Roboto Thin'), local('Roboto-Thin'), url('../fonts/roboto-thin.ttf') format('truetype'), url('../fonts/roboto-thin.otf') format('opentype'), url('../fonts/roboto-thin.woff') format('woff'), url('../fonts/roboto-thin.svg') format('svg');
 }
 @font-face {
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 300;
-	src: url('../fonts/roboto-light.eot');
-	src: local('Roboto Light'), local('Roboto-Light'), url('../fonts/roboto-light.ttf') format('truetype'), url('../fonts/roboto-light.otf') format('opentype'), url('../fonts/roboto-light.woff') format('woff'), url('../fonts/roboto-light.svg') format('svg');
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/roboto-light.eot');
+    src: local('Roboto Light'), local('Roboto-Light'), url('../fonts/roboto-light.ttf') format('truetype'), url('../fonts/roboto-light.otf') format('opentype'), url('../fonts/roboto-light.woff') format('woff'), url('../fonts/roboto-light.svg') format('svg');
 }
 @font-face {
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/roboto-regular.eot');
-	src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto-regular.ttf') format('truetype'), url('../fonts/roboto-regular.otf') format('opentype'), url('../fonts/roboto-regular.woff') format('woff'), url('../fonts/roboto-regular.svg') format('svg');
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-regular.eot');
+    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto-regular.ttf') format('truetype'), url('../fonts/roboto-regular.otf') format('opentype'), url('../fonts/roboto-regular.woff') format('woff'), url('../fonts/roboto-regular.svg') format('svg');
 }
 
 /* Fonts end */
@@ -141,15 +141,15 @@ label.checkbox .jcf-checkbox.jcf-checked {
     background-color: #435993;
 }
 .jcf-checkbox span{
-    position:absolute;
-    display:none;
-    height:8px;
-    width:12px;
-    top:6px;
-    left:3px;
-    background-size: 70px;
-    background-position: -117px -44px;
-    background-image: url("../img/icons.png");
+    position: absolute;
+    display: none;
+    height: 12px;
+    width: 16px;
+    top: 4px;
+    left: 1px;
+    background-size: 78px;
+    background-position: -127px -55px;
+    background-image: url("../img/icons.png?v=1");
 }
 .jcf-checkbox input[type=checkbox]{
     position:absolute;
@@ -314,16 +314,16 @@ label.checkbox .jcf-checkbox.jcf-checked {
     text-align: center;
 }
 .jcf-select .jcf-select-opener {
-    position:absolute;
-    text-align:center;
-    background-image: url("../img/icons.png");
-    background-size: 70px;
-    background-position: -47px -25px;
+    position: absolute;
+    text-align: center;
+    background-image: url("../img/icons.png?v=1");
+    background-size: 78px;
+    background-position: -49px -27px;
     background-repeat: no-repeat;
-    width: 12px;
-    height: 7px;
-    right:19px;
-    top:25px;
+    width: 16px;
+    height: 11px;
+    right: 19px;
+    top: 25px;
     transition-duration: 0.3s;
 }
 label.focus .jcf-select-opener {
@@ -583,10 +583,12 @@ body>.jcf-select-drop.jcf-drop-flipped{
     height: 0px;
     margin-bottom: -12px;
     margin-left: 0px;
-    left: -27px;
+    left: -29px;
     border-top: 1px solid transparent;
-    border-bottom: 24px solid transparent;
-    background-position: -58px -1px;
+    border-bottom: 28px solid transparent;
+    background-position: -63px 1px;
+    border-left-width: 14px;
+    border-right-width: 13px;
 }
 .jcf-range .jcf-range-display-wrapper{
     position:absolute;
@@ -670,17 +672,17 @@ body>.jcf-select-drop.jcf-drop-flipped{
 }
 .jcf-range .jcf-range-handle{
     position: absolute;
-    background-image: url("../img/icons.png");
-    background-size: 70px;
-    background-position: -58px 1px;
+    background-image: url("../img/icons.png?v=1");
+    background-size: 78px;
+    background-position: -62px 3px;
     width: 0px;
-    height: 26px;
+    height: 30px;
     margin-left: -11px;
     z-index: 1;
-    bottom: -30px;
+    bottom: -32px;
     cursor: pointer;
-    border-left: 11px solid transparent;
-    border-right: 12px solid transparent;
+    border-left: 13px solid transparent;
+    border-right: 14px solid transparent;
 }
 .jcf-range .jcf-range-mark{
     position: absolute;
@@ -893,10 +895,10 @@ h1 {
 .slide::before {
     content: " ";
     display: block;
-    width: 47px;
-    height: 47px;
-    background-size: 70px;
-    background-image: url("../img/icons.png");
+    width: 51px;
+    height: 51px;
+    background-size: 78px;
+    background-image: url("../img/icons.png?v=1");
     background-repeat: no-repeat;
     position: absolute;
     top: 56px;
@@ -905,19 +907,19 @@ h1 {
 }
 
 .slide.slide-1::before {
-    background-position: 0 0;
+    background-position: 2px 2px;
 }
 
 .slide.slide-2::before {
-    background-position: 0 -47px;
+    background-position: 2px -49px;
 }
 
 .slide.slide-3::before {
-    background-position: 0 -94px;
+    background-position: 2px -100px;
 }
 
 .slide.slide-4::before {
-    background-position: 0 -141px;
+    background-position: 2px -151px;
 }
 
 h2 {
@@ -1017,7 +1019,7 @@ input.button {
     background-color: #435993;
     color: #fff;
     line-height: 50px;
-    margin: 45px 0 74px;
+    margin: 45px 3px 74px;
     transition-duration: 0.15s;
     padding: 0 33px;
     border-radius: 10px;
@@ -1025,6 +1027,20 @@ input.button {
 
 .button:hover {
     background-color: #4f69ad;
+}
+
+.button.button-secondary {
+    background-color: #fff;
+    color: #435993;
+    border: 1px solid #435993;
+    line-height: 48px;
+    padding: 0 32px;
+}
+
+.button.button-secondary:hover {
+    background-color: #fff;
+    color: #1c1c1c;
+    border: 1px solid #1c1c1c;
 }
 
 .bar-text {
@@ -1107,14 +1123,14 @@ textarea:-moz-placeholder { /* Firefox 18- */
 
     header .menu-button {
         display: block;
-        width: 16px;
-        height: 12px;
+        width: 20px;
+        height: 16px;
         position: absolute;
-        top: 13px;
-        right: 13px;
-        background-size: 70px;
-        background-image: url("../img/icons.png");
-        background-position: -47px -32px;
+        top: 11px;
+        right: 11px;
+        background-size: 78px;
+        background-image: url("../img/icons.png?v=1");
+        background-position: -49px -38px;
     }
 
     .slides-wrapper {
