@@ -80,8 +80,12 @@ $(document).ready(function () {
         sliderNav.eq(slideIndex).addClass('active');
 
         $(':focus').blur();
+
         $(slider).one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function (e) {
             slider.find('.slide:eq(' + slideIndex + ')').find('input[type=text], textarea').eq(0).focus();
+            $('html, body').animate({
+                scrollTop: slider.offset().top
+            }, 300);
         });
     }
 
